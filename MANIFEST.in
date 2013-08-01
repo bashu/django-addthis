@@ -1,0 +1,8 @@
+include AUTHORS
+include LICENSE
+include README.rst
+
+recursive-include docs *
+recursive-include addthis/templates *
+
+recursive-exclude * *.py[co]

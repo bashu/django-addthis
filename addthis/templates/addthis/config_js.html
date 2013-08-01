@@ -1,0 +1,32 @@
+<script>
+  var addthis_config = {
+    {% if data_ga_property %}
+      data_ga_property: '{{ data_ga_property }}',
+      data_ga_social: {{ data_ga_social|yesno:"true,false" }},
+    {% endif %}
+    data_track_addressbar: {{ data_track_addressbar|yesno:"true,false" }},
+    data_track_clickback: {{ data_track_clickback|yesno:"true,false" }},
+    ui_use_css: {{ ui_use_css|yesno:"true,false" }},
+  };
+
+  var addthis_share = {
+    {% if twitter_bitly %}
+      url_transforms : {
+        shorten: {
+          twitter: 'bitly',
+        },
+        clean: true,
+      },
+      shorteners : {
+        bitly : {},
+      },
+    {% endif %}
+    {% if twitter_via %}
+      passthrough : {
+        twitter: {
+          via: '{{ twitter_via }}',
+        },
+      },
+    {% endif %}
+  };
+</script>

@@ -1,3 +1,4 @@
+==============
 Django AddThis
 ==============
 
@@ -5,13 +6,13 @@ This project is a simple integration of the AddThis social sharing widget for
 quick implementation in Django projects.
 
 Requirements
-------------
+============
 
 - Python 2.5+
 - Django 1.4+
 
 Installation
-------------
+============
 
 #. Add the ``addthis`` directory to your Python path.
 #. Add ``addthis`` to your ``INSTALLED_APPS`` setting::
@@ -22,14 +23,12 @@ Installation
        )
 
 Configuration
--------------
+=============
 
 #. The ``addthis_widget`` template tag requires a ``pub_id``. You must either
    pass it as an argument or set ``ADDTHIS_PUB_ID`` in your settings. Setting
    this value means that you can omit the `pub_id` argument when invoking the
-   template tag:
-
-   - ``ADDTHIS_PUB_ID``
+   template tag.
 
 #. There are a few other configuration options for Django AddThis that can be
    placed in your settings:
@@ -43,7 +42,7 @@ Configuration
    - ``ADDTHIS_TWITTER_VIA`` (String)
 
 Basic Usage
------------
+===========
 
 #. Load the tag library::
 
@@ -80,8 +79,8 @@ Basic Usage
 
    part of the (generated) code as the ``addthis_widget`` template tag takes care of this.
 
-Full Example
-------------
+Example
+=======
 
 ::
 

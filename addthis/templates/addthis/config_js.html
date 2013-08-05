@@ -9,24 +9,26 @@
     ui_use_css: {{ ui_use_css|yesno:"true,false" }},
   };
 
-  var addthis_share = {
-    {% if twitter_bitly %}
-      url_transforms : {
-        shorten: {
-          twitter: 'bitly',
+  {% if twitter_bitly or twitter_via %}
+    var addthis_share = {
+      {% if twitter_bitly %}
+        url_transforms : {
+          shorten: {
+            twitter: 'bitly',
+          },
+          clean: true,
         },
-        clean: true,
-      },
-      shorteners : {
-        bitly : {},
-      },
-    {% endif %}
-    {% if twitter_via %}
-      passthrough : {
-        twitter: {
-          via: '{{ twitter_via }}',
+        shorteners : {
+          bitly : {},
         },
-      },
-    {% endif %}
-  };
+      {% endif %}
+      {% if twitter_via %}
+        passthrough : {
+          twitter: {
+            via: '{{ twitter_via }}',
+          },
+        },
+      {% endif %}
+    };
+  {% endif %}
 </script>

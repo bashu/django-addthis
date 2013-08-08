@@ -16,7 +16,7 @@ Installation
 
 #. Add the ``addthis`` directory to your Python path. Using ``pip``::
 
-       pip install git+https://bitbucket.org/raymondwanyoike/django-addthis.git#egg=django-addthis
+       pip install "git+https://bitbucket.org/raymondwanyoike/django-addthis.git#egg=django-addthis"
 
 #. Add ``addthis`` to your ``INSTALLED_APPS`` setting::
 

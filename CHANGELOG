@@ -1,1 +1,7 @@
-1.0 Initial release
+1.0.1
+=====
+- Fix/Remove invalid "ui_use_css" config
+
+1.0
+===
+- Initial release

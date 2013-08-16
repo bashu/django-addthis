@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-
 from setuptools import setup, find_packages
 
 
 setup(
     name='django-addthis',
-    version='1.0',
+    version='1.0.1',
     description='Simple integration of the AddThis social sharing widget in Django projects.',
     author='Raymond Wanyoike',
     author_email='raymond.wanyoike@gmail.com',

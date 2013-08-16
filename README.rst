@@ -14,7 +14,10 @@ Requirements
 Installation
 ============
 
-#. Add the ``addthis`` directory to your Python path.
+#. Add the ``addthis`` directory to your Python path. Using ``pip``::
+
+       pip install "git+https://bitbucket.org/raymondwanyoike/django-addthis.git#egg=django-addthis"
+
 #. Add ``addthis`` to your ``INSTALLED_APPS`` setting::
 
        INSTALLED_APPS = (
@@ -54,13 +57,14 @@ Basic Usage
 
 #. Load the js widget::
 
-       {% addthis_widget pub_id=xxxxxxxxxx %}
+       {% addthis_widget pub_id=XXXXXXXXX %}
 
    or with ``ADDTHIS_PUB_ID`` defined in settings.py::
 
       {% addthis_widget %}
 
-#. Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and create/generate/get your social sharing code::
+#. Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and
+   create/generate/get your social sharing code::
 
        <!-- AddThis Button BEGIN -->
        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -75,9 +79,10 @@ Basic Usage
 
    Be sure to omit the::
 
-       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xxxxxxxxxx"></script>
+       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=XXXXXXXXX"></script>
 
-   part of the (generated) code as the ``addthis_widget`` template tag takes care of this.
+   part of the (generated) code as the ``addthis_widget`` template tag takes
+   care of this.
 
 Example
 =======

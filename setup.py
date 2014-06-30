@@ -10,10 +10,10 @@ setup(
     author='Raymond Wanyoike',
     author_email='raymond.wanyoike@gmail.com',
     long_description=open('README.rst').read(),
-    url='http://bitbucket.org/raymondwanyoike/django-addthis/',
+    url='https://github.com/raymondwanyoike/django-addthis',
     packages=find_packages(),
     include_package_data=True,
-    keywords='django addthis',
+    keywords='django, addthis',
     install_requires=[
         'Django>=1.4,<1.6',
     ],

@@ -2,8 +2,8 @@
 django-addthis
 ==============
 
-This project is a simple integration of the `AddThis <http://www.addthis.com>`_
-social sharing widget for quick implementation in Django projects.
+A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing
+widget for quick implementation in Django projects.
 
 Requirements
 ============
@@ -38,9 +38,9 @@ Configuration
             ...
         }
 
-#.  There are a `few other configuration <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable/>`_
-    options for django-addthis that can be placed in your ``ADDTHIS_SETTINGS``
-    settings dictionary:
+#.  There are a few `other configuration options <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable/>`_
+    for django-addthis that can be placed in your ``ADDTHIS_SETTINGS`` settings
+    dictionary:
 
     ============================ ============================
     Django Setting               Default

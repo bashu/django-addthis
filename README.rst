@@ -1,9 +1,9 @@
 ==============
-Django AddThis
+django-addthis
 ==============
 
-This project is a simple integration of the AddThis social sharing widget for
-quick implementation in Django projects.
+This project is a simple integration of the `AddThis <http://www.addthis.com>`_
+social sharing widget for quick implementation in Django projects.
 
 Requirements
 ============
@@ -14,75 +14,91 @@ Requirements
 Installation
 ============
 
-#. Add the ``addthis`` directory to your Python path. Using ``pip``::
+#.  Add the ``addthis`` directory to your Python path. Using ``pip``::
 
-       pip install django-addthis
+        pip install django-addthis
 
-#. Add ``addthis`` to your ``INSTALLED_APPS`` setting::
+#.  Add ``addthis`` to your ``INSTALLED_APPS`` setting::
 
-       INSTALLED_APPS = (
-           ...
-           'addthis',
-       )
+        INSTALLED_APPS = (
+            ...
+             'addthis',
+        )
 
 Configuration
 =============
 
-#. The ``addthis_widget`` template tag requires a ``pub_id``. You must either
-   pass it as an argument or set ``ADDTHIS_PUB_ID`` in your settings. Setting
-   this value means that you can omit the `pub_id` argument when invoking the
-   template tag.
+#.  The ``addthis_widget`` template tag requires a ``pub_id``. You must either
+    pass it as an argument or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS``
+    settings dictionary. Setting this value means that you can omit the
+    ``pub_id`` argument when invoking the template tag::
 
-#. There are a few other configuration options for Django AddThis that can be
-   placed in your settings:
+        ADDTHIS_SETTINGS = {
+            'PUB_ID': 'xx-xxxxxxxxxxxxxxxx',
+            ...
+        }
 
-   - ``ADDTHIS_DATA_GA_PROPERTY`` (or ``GOOGLE_ANALYTICS_PROPERTY_ID``) (String)
-   - ``ADDTHIS_DATA_GA_SOCIAL`` (Boolean)
-   - ``ADDTHIS_DATA_TRACK_ADDRESSBAR`` (Boolean)
-   - ``ADDTHIS_DATA_TRACK_CLICKBACK`` (Boolean)
-   - ``ADDTHIS_GA_TRACKING_ENABLED`` (Boolean)
-   - ``ADDTHIS_TWITTER_BITLY`` (Boolean)
-   - ``ADDTHIS_TWITTER_VIA`` (String)
+#.  There are a `few other configuration <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable/>`_
+    options for django-addthis that can be placed in your ``ADDTHIS_SETTINGS``
+    settings dictionary:
+
+    ============================ ============================
+    Django Setting               Default
+    ============================ ============================
+    USERNAME                     N/A
+    SERVICES_EXCLUDE             N/A
+    SERVICES_COMPACT             N/A
+    SERVICES_EXPANDED            N/A
+    SERVICES_CUSTOM              N/A
+    UI_CLICK                     False
+    UI_DELAY                     0
+    UI_HOVER_DIRECTION           0
+    UI_LANGUAGE                  N/A
+    UI_OFFSET_TOP                0
+    UI_OFFSET_LEFT               0
+    UI_HEADER_COLOR              N/A
+    UI_HEADER_BACKGROUND         N/A
+    UI_COBRAND                   N/A
+    UI_USE_CSS                   True
+    UI_USE_ADDRESSBOOK           False
+    UI_508_COMPLIANT             False
+    DATA_TRACK_CLICKBACK         True
+    DATA_GA_TRACKER              N/A
+    ============================ ============================
+
 
 Basic Usage
 ===========
 
-#. Load the tag library::
+#.  Load the tag library::
 
-       {% load addthis %}
+        {% load addthis %}
 
-#. Set the js config (API)::
+#.  Set the js config (API)::
 
-       {% addthis_config %}
+        {% addthis_config %}
 
-#. Load the js widget::
+#.  Load the js widget::
 
-       {% addthis_widget pub_id=XXXXXXXXX %}
+        {% addthis_widget pub_id='xx-xxxxxxxxxxxxxxxx' %}
 
-   or with ``ADDTHIS_PUB_ID`` defined in settings.py::
+    or with ``PUB_ID`` defined in your ``ADDTHIS_SETTINGS`` settings
+    dictionary::
 
-      {% addthis_widget %}
+        {% addthis_widget %}
 
-#. Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and
-   create/generate/get your social sharing code::
+#.  Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and
+    create/generate/get your social sharing code, e.g::
 
-       <!-- AddThis Button BEGIN -->
-       <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-         <a class="addthis_button_preferred_1"></a>
-         <a class="addthis_button_preferred_2"></a>
-         <a class="addthis_button_preferred_3"></a>
-         <a class="addthis_button_preferred_4"></a>
-         <a class="addthis_button_compact"></a>
-         <a class="addthis_counter addthis_bubble_style"></a>
-      </div>
-      <!-- AddThis Button END -->
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_sharing_toolbox"></div>
 
-   Be sure to omit the::
+    Be sure to omit the::
 
-       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=XXXXXXXXX"></script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xx-xxxxxxxxxxxxxxxx"></script>
 
-   part of the (generated) code as the ``addthis_widget`` template tag takes
-   care of this.
+    part of the (generated) code as the ``addthis_widget`` template tag takes
+    care of this.
 
 Example
 =======
@@ -92,24 +108,24 @@ Example
     {% load addthis %}
 
     <html>
+
       <head>
-        <title>Full Example</title>
+        <title>django-addthis Example</title>
+        <meta charset="utf-8">
         {% addthis_config %}
         {% addthis_widget %}
       </head>
-      <body>
-        <!-- AddThis Share Buttons BEGIN -->
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-          <a class="addthis_button_preferred_1"></a>
-          <a class="addthis_button_preferred_2"></a>
-        </div>
-        <!-- AddThis Share Buttons END -->
 
-        <!-- AddThis Follow Buttons BEGIN -->
-        <div class="addthis_toolbox addthis_32x32_style addthis_default_style">
-          <a class="addthis_button_facebook_follow" addthis:userid="YOUR-PROFILE"></a>
-          <a class="addthis_button_twitter_follow" addthis:userid="YOUR-USERNAME"></a>
-        </div>
-        <!-- AddThis Follow Buttons END -->
+      <body>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_sharing_toolbox"></div>
+
+        <p>Well, the way they make shows is, they make one show. That show's
+        called a pilot. Then they show that show to the people who make shows,
+        and on the strength of that one show they decide if they're going to
+        make more shows. Some pilots get picked and become television programs.
+        Some don't, become nothing. She starred in one of the ones that became
+        nothing.</p>
       </body>
+
     </html>

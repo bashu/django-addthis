@@ -22,7 +22,7 @@ Installation
 
         INSTALLED_APPS = (
             ...
-             'addthis',
+            'addthis',
         )
 
 Configuration

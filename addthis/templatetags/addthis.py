@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 from django import template
 from django.template import TemplateSyntaxError
 
@@ -14,9 +16,10 @@ def addthis_widget(pub_id=None):
         if 'PUB_ID' in addthis:
             pub_id = addthis['PUB_ID']
         else:
-            raise TemplateSyntaxError('''The `addthis_widget` template tag
-                requires a `pub_id`. You must either pass it as an argument or
-                set ADDTHIS_SETTINGS['PUB_ID'] in your settings.''')
+            raise TemplateSyntaxError(
+                'The `addthis_widget` template tag requires a `pub_id`. You ' +
+                'must either pass it as an argument or set ' +
+                'ADDTHIS_SETTINGS[\'PUB_ID\'] in your settings.')
 
     return {'pub_id': pub_id}
 

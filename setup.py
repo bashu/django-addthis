@@ -13,7 +13,7 @@ setup(
     url='https://github.com/raymondwanyoike/django-addthis/',
     packages=find_packages(),
     include_package_data=True,
-    keywords='django addthis',
+    keywords='django, addthis',
     install_requires=[
         'Django>=1.4,<=1.6.5',
     ],

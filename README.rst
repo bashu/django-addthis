@@ -14,9 +14,15 @@ Requirements
 Installation
 ============
 
-#.  Add the ``addthis`` directory to your Python path. Using ``pip``::
+#.  Install the latest stable version using ``pip``::
 
         pip install django-addthis
+
+    Alternatively, if you want to install the sources directly off the repository::
+
+        pip install git+https://github.com/raymondwanyoike/django-addthis.git#egg=django-addthis
+
+    You may have to add the ``addthis`` directory to your Python path in the latter case.
 
 #.  Add ``addthis`` to your ``INSTALLED_APPS`` setting::
 

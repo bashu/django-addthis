@@ -1,3 +1,9 @@
+2.0.0
+=====
+- New configuration options
+- New settings definition
+- Works with the new AddThis widgets (http://www.addthis.com/blog/2014/06/10/whats-new-in-your-addthis-dashboard/)
+
 1.0.1
 =====
 - Fix/Remove invalid "ui_use_css" config

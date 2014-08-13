@@ -6,7 +6,7 @@
         {% if addthis.SERVICES_COMPACT %}services_compact: '{{ addthis.SERVICES_COMPACT }}',{% endif %}
         {% if addthis.SERVICES_EXPANDED %}services_expanded: '{{ addthis.SERVICES_EXPANDED }}',{% endif %}
         {# TODO: Review {{ addthis.SERVICES_CUSTOM|safe }} #}
-        {% if addthis.SERVICES_CUSTOM %}services_custom: {{ addthis.SERVICES_CUSTOM|safe }},{% endif %}
+        {% if addthis.SERVICES_CUSTOM %}services_custom: '{{ addthis.SERVICES_CUSTOM|safe }}',{% endif %}
 
         ui_click: {{ addthis.UI_CLICK|yesno:"true,false" }},
         {% if addthis.UI_DELAY %}ui_delay: {{ addthis.UI_DELAY }},{% endif %}

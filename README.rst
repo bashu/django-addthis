@@ -14,17 +14,23 @@ Requirements
 Installation
 ============
 
-#.  Install the latest stable version using ``pip``::
+#.  Install the latest stable version using ``pip``
+
+    .. code:: shell
 
         pip install django-addthis
 
-    Alternatively, if you want to install the sources directly off the repository::
+    Alternatively, if you want to install the sources directly off the repository
+
+    .. code:: shell
 
         pip install git+https://github.com/raymondwanyoike/django-addthis.git#egg=django-addthis
 
     You may have to add the ``addthis`` directory to your Python path in the latter case.
 
-#.  Add ``addthis`` to your ``INSTALLED_APPS`` setting::
+#.  Add ``addthis`` to your ``INSTALLED_APPS`` setting
+
+    .. code:: python
 
         INSTALLED_APPS = (
             ...
@@ -37,7 +43,9 @@ Configuration
 #.  The ``addthis_widget`` template tag requires a ``pub_id``. You must either
     pass it as an argument or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS``
     settings dictionary. Setting this value means that you can omit the
-    ``pub_id`` argument when invoking the template tag::
+    ``pub_id`` argument when invoking the template tag
+
+    .. code:: python
 
         ADDTHIS_SETTINGS = {
             'PUB_ID': 'xx-xxxxxxxxxxxxxxxx',
@@ -76,30 +84,42 @@ Configuration
 Basic Usage
 ===========
 
-#.  Load the tag library::
+#.  Load the tag library
+
+    .. code:: html
 
         {% load addthis %}
 
-#.  Set the js config (API)::
+#.  Set the js config (API)
+
+    .. code:: html
 
         {% addthis_config %}
 
-#.  Load the js widget::
+#.  Load the js widget
+
+    .. code:: html
 
         {% addthis_widget pub_id='xx-xxxxxxxxxxxxxxxx' %}
 
     or with ``PUB_ID`` defined in your ``ADDTHIS_SETTINGS`` settings
-    dictionary::
+    dictionary
+
+    .. code:: html
 
         {% addthis_widget %}
 
 #.  Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and
-    create/generate/get your social sharing code, e.g::
+    create/generate/get your social sharing code, e.g
+
+    .. code:: html
 
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_sharing_toolbox"></div>
 
-    Be sure to omit the::
+    Be sure to omit the
+
+    .. code:: html
 
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xx-xxxxxxxxxxxxxxxx"></script>
 
@@ -109,29 +129,32 @@ Basic Usage
 Example
 =======
 
-::
+.. code:: html
 
-    {% load addthis %}
+    <!DOCTYPE HTML>{% load addthis %}
 
     <html>
 
-      <head>
-        <title>django-addthis Example</title>
-        <meta charset="utf-8">
-        {% addthis_config %}
-        {% addthis_widget %}
-      </head>
+    <head>
+      <meta charset="utf-8">
+      <title>django-addthis Example</title>
 
-      <body>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_sharing_toolbox"></div>
+      {% addthis_config %}
+    </head>
 
-        <p>Well, the way they make shows is, they make one show. That show's
-        called a pilot. Then they show that show to the people who make shows,
-        and on the strength of that one show they decide if they're going to
-        make more shows. Some pilots get picked and become television programs.
-        Some don't, become nothing. She starred in one of the ones that became
-        nothing.</p>
-      </body>
+    <body>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_sharing_toolbox"></div>
+
+      <p>Well, the way they make shows is, they make one show. That show's
+      called a pilot. Then they show that show to the people who make shows,
+      and on the strength of that one show they decide if they're going to
+      make more shows. Some pilots get picked and become television programs.
+      Some don't, become nothing. She starred in one of the ones that became
+      nothing.</p>
+
+      <!-- Placed at the end of the document so the pages load faster -->
+      {% addthis_widget %}
+    </body>
 
     </html>

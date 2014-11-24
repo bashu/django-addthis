@@ -131,7 +131,7 @@ Example
 
 .. code:: html
 
-    {% load addthis %}<!DOCTYPE HTML>
+    {% load addthis %}<!DOCTYPE html>
 
     <html>
 

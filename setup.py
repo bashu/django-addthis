@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-addthis',
-    version='2.0.0',
+    version='2.0.1',
     description='Simple integration of the AddThis social sharing widget in Django projects.',
     author='Raymond Wanyoike',
     author_email='raymond.wanyoike@gmail.com',
@@ -22,7 +22,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Topic :: Utilities'

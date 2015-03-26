@@ -3,7 +3,7 @@ django-addthis
 ==============
 
 A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing
-widget for quick implementation in Django projects.
+widget for Django projects.
 
 Requirements
 ============
@@ -26,8 +26,6 @@ Installation
 
         pip install git+https://github.com/raymondwanyoike/django-addthis.git#egg=django-addthis
 
-    You may have to add the ``addthis`` directory to your Python path in the latter case.
-
 #.  Add ``addthis`` to your ``INSTALLED_APPS`` setting
 
     .. code:: python
@@ -42,8 +40,8 @@ Configuration
 
 #.  The ``addthis_widget`` template tag requires a ``pub_id``. You must either
     pass it as an argument or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS``
-    settings dictionary. Setting this value means that you can omit the
-    ``pub_id`` argument when invoking the template tag
+    settings dictionary. Setting this value means that you can omit the ``pub_id``
+    argument when invoking the template tag
 
     .. code:: python
 
@@ -153,7 +151,7 @@ Example
       Some don't, become nothing. She starred in one of the ones that became
       nothing.</p>
 
-      <!-- Placed at the end of the document so the pages load faster -->
+      <!-- Placed at the end of the document so the page load faster -->
       {% addthis_widget %}
     </body>
 

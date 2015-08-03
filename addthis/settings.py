@@ -1,6 +1,5 @@
 from django.conf import settings
 
-
 # Ref: http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable
 ADDTHIS_SETTINGS = getattr(settings, 'ADDTHIS_SETTINGS', {})
 

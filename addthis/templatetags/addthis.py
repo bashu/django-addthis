@@ -5,7 +5,6 @@ from django.template import TemplateSyntaxError
 
 from addthis import settings
 
-
 register = template.Library()
 
 
@@ -16,14 +15,13 @@ def addthis_widget(pub_id=None):
         if "PUB_ID" in addthis:
             pub_id = addthis["PUB_ID"]
         else:
-            raise TemplateSyntaxError(
-                "The `addthis_widget` template tag requires a `pub_id`. You " +
-                "must either pass it as an argument or set " +
-                "ADDTHIS_SETTINGS['PUB_ID'] in your settings.")
+            raise TemplateSyntaxError("The `addthis_widget` template tag " +
+                "requires a site profile id. Either pass it as `pub_id`, or " +
+                "set ADDTHIS_SETTINGS['PUB_ID'] in your settings.")
 
-    return {"pub_id": pub_id}
+    context = {
+        "pub_id": pub_id,
+        "addthis": settings.ADDTHIS_SETTINGS,
+    }
 
-
-@register.inclusion_tag("addthis/config_js.html")
-def addthis_config():
-    return {"addthis": settings.ADDTHIS_SETTINGS}
+    return context

@@ -2,8 +2,7 @@
 django-addthis
 ==============
 
-A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing
-widget for Django projects.
+A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing widget for Django projects.
 
 Requirements
 ============
@@ -14,7 +13,7 @@ Requirements
 Installation
 ============
 
-#.  Install the latest stable version using ``pip``
+#.  Install the latest stable version using ``pip``:
 
     .. code:: shell
 
@@ -26,7 +25,7 @@ Installation
 
         pip install git+https://github.com/raymondwanyoike/django-addthis.git#egg=django-addthis
 
-#.  Add ``addthis`` to your ``INSTALLED_APPS`` setting
+#.  Add ``addthis`` to your ``INSTALLED_APPS`` setting:
 
     .. code:: python
 
@@ -38,10 +37,7 @@ Installation
 Configuration
 =============
 
-#.  The ``addthis_widget`` template tag requires a ``pub_id``. You must either
-    pass it as an argument or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS``
-    settings dictionary. Setting this value means that you can omit the ``pub_id``
-    argument when invoking the template tag
+#.  The ``addthis_widget`` template tag requires a site *profile id*. ``pub_id``. Either pass it as ``pub_id``, or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS`` settings dictionary:
 
     .. code:: python
 
@@ -50,39 +46,36 @@ Configuration
             ...
         }
 
-#.  There are a few `other configuration options <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable/>`_
-    for django-addthis that can be placed in your ``ADDTHIS_SETTINGS`` settings
-    dictionary:
+#.  There are a few `configuration options <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable>`_ for django-addthis that can be placed in your ``ADDTHIS_SETTINGS`` settings dictionary:
 
     ============================ ============================
-    Django Setting               Default
+    Option                       Default
     ============================ ============================
-    USERNAME                     N/A
-    SERVICES_EXCLUDE             N/A
-    SERVICES_COMPACT             N/A
-    SERVICES_EXPANDED            N/A
-    SERVICES_CUSTOM              N/A
+    USERNAME
+    SERVICES_EXCLUDE
+    SERVICES_COMPACT
+    SERVICES_EXPANDED
+    SERVICES_CUSTOM
     UI_CLICK                     False
     UI_DELAY                     0
     UI_HOVER_DIRECTION           0
-    UI_LANGUAGE                  N/A
+    UI_LANGUAGE
     UI_OFFSET_TOP                0
     UI_OFFSET_LEFT               0
-    UI_HEADER_COLOR              N/A
-    UI_HEADER_BACKGROUND         N/A
-    UI_COBRAND                   N/A
+    UI_HEADER_COLOR
+    UI_HEADER_BACKGROUND
+    UI_COBRAND
     UI_USE_CSS                   True
     UI_USE_ADDRESSBOOK           False
     UI_508_COMPLIANT             False
     DATA_TRACK_CLICKBACK         True
-    DATA_GA_TRACKER              N/A
+    DATA_GA_TRACKER
     ============================ ============================
-
 
 Basic Usage
 ===========
 
-#.  Load the tag library
+#.  Load the tag library:
 
     .. code:: html
 
@@ -107,29 +100,30 @@ Basic Usage
 
         {% addthis_widget %}
 
-#.  Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and
-    create/generate/get your social sharing code, e.g
+#.  Visit the AddThis `Get the Code <http://www.addthis.com/get>`_ page and create/generate your social sharing code, e.g:
 
     .. code:: html
 
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_sharing_toolbox"></div>
 
-    Be sure to omit the
+    Be sure to omit the:
 
     .. code:: html
 
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xx-xxxxxxxxxxxxxxxx"></script>
 
-    part of the (generated) code as the ``addthis_widget`` template tag takes
-    care of this.
+    part of the (generated) code as the ``addthis_widget`` template tag takes care of this.
 
 Example
 =======
 
 .. code:: html
 
-    {% load addthis %}<!DOCTYPE html>
+    {% load addthis %}
+
+
+    <!DOCTYPE html>
 
     <html>
 

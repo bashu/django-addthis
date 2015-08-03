@@ -2,14 +2,11 @@
 *.py[co]
 
 # Packaging files:
-/*.egg*
-/dist/
+*.egg*
 
-# Editor and IDE temp and project files:
+# Editor temp files:
 *.swp
 *~
-/.idea/
-/*.geany
 
 # Sphinx docs:
-/build/
+build

@@ -9,14 +9,14 @@ setup(
     author="Raymond Wanyoike",
     author_email="raymond.wanyoike@gmail.com",
     url="https://github.com/raymondwanyoike/django-addthis/",
-    description="Simple integration of the AddThis social sharing widget in " +
-        "Django projects.",
+    description="Simple integration of the AddThis social sharing widget " +
+        "for Django projects.",
     long_description=open("README.rst").read(),
-    download_url="https://github.com/raymondwanyoike/django-addthis/",
+    download_url="https://github.com/raymondwanyoike/django-addthis",
     license="GPLv3",
     packages=find_packages(),
     include_package_data=True,
-    keywords="django, addthis",
+    keywords="django, templatetag, addthis, sharing",
     install_requires=[
         "Django>=1.4,<=1.6.11",
     ],

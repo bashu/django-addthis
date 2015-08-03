@@ -19,12 +19,6 @@ Installation
 
         pip install django-addthis
 
-    Alternatively, if you want to install the sources directly off the repository
-
-    .. code:: shell
-
-        pip install git+https://github.com/raymondwanyoike/django-addthis.git#egg=django-addthis
-
 #.  Add ``addthis`` to your ``INSTALLED_APPS`` setting:
 
     .. code:: python
@@ -45,6 +39,8 @@ Configuration
             'PUB_ID': 'xx-xxxxxxxxxxxxxxxx',
             ...
         }
+
+    The site *profile id* can be found by visiting its Profile Options page on `AddThis <http://www.addthis.com>`_ (**ID:**).
 
 #.  There are a few `configuration options <http://support.addthis.com/customer/portal/articles/1337994-the-addthis_config-variable>`_ for django-addthis that can be placed in your ``ADDTHIS_SETTINGS`` settings dictionary:
 
@@ -81,20 +77,15 @@ Basic Usage
 
         {% load addthis %}
 
-#.  Set the js config (API)
+    You can pass these options as arguments:
 
-    .. code:: html
+    ========================= ========================= =========================
+    Option                    Default                   Description
+    ========================= ========================= =========================
+    pub_id                                              Site *profile id* (see configuration above).
+    ========================= ========================= =========================
 
-        {% addthis_config %}
-
-#.  Load the js widget
-
-    .. code:: html
-
-        {% addthis_widget pub_id='xx-xxxxxxxxxxxxxxxx' %}
-
-    or with ``PUB_ID`` defined in your ``ADDTHIS_SETTINGS`` settings
-    dictionary
+#.  Load the widget:
 
     .. code:: html
 
@@ -130,8 +121,6 @@ Example
     <head>
       <meta charset="utf-8">
       <title>django-addthis Example</title>
-
-      {% addthis_config %}
     </head>
 
     <body>

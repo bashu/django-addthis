@@ -1,11 +1,15 @@
+3.0.0
+=====
+- Support Django 1.6+
+- New template tag
+
 2.0.2
 =====
-- Refactoring
+- Refactor
 
 2.0.1
 =====
 - Add GNU GPL v3.0 license
-- Update contributers list
 
 2.0.0
 =====

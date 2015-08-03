@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-addthis",
-    version="2.0.2",
+    version="3.0.0",
     author="Raymond Wanyoike",
     author_email="raymond.wanyoike@gmail.com",
     url="https://github.com/raymondwanyoike/django-addthis/",

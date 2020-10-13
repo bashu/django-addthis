@@ -15,9 +15,10 @@ def addthis_widget(pub_id=None):
         if "PUB_ID" in addthis:
             pub_id = addthis["PUB_ID"]
         else:
-            raise TemplateSyntaxError("The `addthis_widget` template tag " +
-                "requires a site profile id. Either pass it as `pub_id`, or " +
-                "set ADDTHIS_SETTINGS['PUB_ID'] in your settings.")
+            raise TemplateSyntaxError(
+                "The `addthis_widget` template tag requires a site profile id. "
+                + "Either pass it as `pub_id`, or set ADDTHIS_SETTINGS['PUB_ID'] in your settings."
+            )
 
     context = {
         "pub_id": pub_id,

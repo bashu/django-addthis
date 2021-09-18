@@ -90,14 +90,6 @@ Usage
 
         {% load addthis %}
 
-    You can pass these options as arguments:
-
-    ========================= ========================= =========================
-    Option                    Default                   Description
-    ========================= ========================= =========================
-    pub_id                                              Site *profile id* (see configuration above).
-    ========================= ========================= =========================
-
     then load the widget:
 
     .. code:: html+django

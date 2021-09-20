@@ -15,6 +15,9 @@ Authored by `Raymond Wanyoike <https://github.com/rwanyoike>`_, and some great
 .. image:: https://img.shields.io/github/license/bashu/django-addthis.svg
     :target: https://pypi.python.org/pypi/django-addthis/
 
+.. image:: https://img.shields.io/travis/bashu/django-addthis.svg
+    :target: https://travis-ci.com/github/bashu/django-addthis/
+
 Installation
 ============
 

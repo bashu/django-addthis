@@ -1,11 +1,6 @@
 django-addthis
 ==============
 
-A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing widget for Django_ projects.
-
-Authored by `Raymond Wanyoike <https://github.com/rwanyoike>`_, and some great
-`contributors <https://github.com/bashu/django-addthis/contributors>`_.
-
 .. image:: https://img.shields.io/pypi/v/django-addthis.svg
     :target: https://pypi.python.org/pypi/django-addthis/
 
@@ -18,8 +13,13 @@ Authored by `Raymond Wanyoike <https://github.com/rwanyoike>`_, and some great
 .. image:: https://img.shields.io/travis/bashu/django-addthis.svg
     :target: https://travis-ci.com/github/bashu/django-addthis/
 
+A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing widget for Django_ projects.
+
+Maintained by `Basil Shubin <https://github.com/bashu/>`_, and some great
+`contributors <https://github.com/bashu/django-addthis/contributors>`_.
+
 Installation
-============
+------------
 
 First install the module, preferably in a virtual environment. It can be installed from PyPI:
 
@@ -28,7 +28,7 @@ First install the module, preferably in a virtual environment. It can be install
     pip install django-addthis
 
 Setup
-=====
+-----
 
 You'll need to add ``addthis`` to ``INSTALLED_APPS`` in your project's ``settings.py`` file:
 
@@ -39,7 +39,7 @@ You'll need to add ``addthis`` to ``INSTALLED_APPS`` in your project's ``setting
     ]
 
 Configuration
-=============
+~~~~~~~~~~~~~
 
 The ``addthis_widget`` template tag requires a site *profile id*: ``pub_id``. Either pass it as ``pub_id``, or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS`` settings dictionary:
 
@@ -85,7 +85,7 @@ a good example.
 You need Django 1.8 or above to run that. It might run on older versions but that is not tested.
 
 Usage
-=====
+-----
 
 #.  First of all, load the ``addthis`` in every template where you want to use it:
 
@@ -115,7 +115,7 @@ Usage
     part of the (generated) code as the ``addthis_widget`` template tag takes care of this.
 
 Example
--------
+~~~~~~~
 
 .. code:: html+django
 
@@ -151,6 +151,11 @@ Contributing
 If you've found a bug, implemented a feature or customized the template and
 think it is useful then please consider contributing. Patches, pull requests or
 just suggestions are welcome!
+
+Credits
+-------
+
+`django-addthis <https://github.com/bashu/django-addthis/>`_ was originally started by `Raymond Wanyoike <https://github.com/rwanyoike>`_ who has now unfortunately abandoned the project.
 
 License
 -------

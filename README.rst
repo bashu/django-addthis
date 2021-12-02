@@ -39,7 +39,7 @@ You'll need to add ``addthis`` to ``INSTALLED_APPS`` in your project's ``setting
     ]
 
 Configuration
-~~~~~~~~~~~~~
+-------------
 
 The ``addthis_widget`` template tag requires a site *profile id*: ``pub_id``. Either pass it as ``pub_id``, or set ``PUB_ID`` in your ``ADDTHIS_SETTINGS`` settings dictionary:
 

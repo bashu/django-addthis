@@ -10,8 +10,8 @@ django-addthis
 .. image:: https://img.shields.io/github/license/bashu/django-addthis.svg
     :target: https://pypi.python.org/pypi/django-addthis/
 
-.. image:: https://img.shields.io/travis/bashu/django-addthis.svg
-    :target: https://travis-ci.com/github/bashu/django-addthis/
+.. image:: https://app.travis-ci.com/bashu/django-addthis.svg?branch=develop
+    :target: https://app.travis-ci.com/bashu/django-addthis
 
 A simple integration of the `AddThis <http://www.addthis.com>`_ social sharing widget for Django_ projects.
 

@@ -1,12 +1,9 @@
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-import re
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Build paths inside the project like this: BASE_DIR / ...
+BASE_DIR = Path(__file__).resolve().parent
 
-SECRET_KEY = "DUMMY_SECRET_KEY"
-
-INTERNAL_IPS = []
+SECRET_KEY = "YOUR_SECRET_KEY"  # noqa: S105
 
 # Application definition
 
@@ -15,12 +12,13 @@ PROJECT_APPS = ["addthis.tests", "addthis"]
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
-] + PROJECT_APPS
+    *PROJECT_APPS,
+]
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "tests", "templates")],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

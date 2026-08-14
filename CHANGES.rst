@@ -1,6 +1,15 @@
 Changes
 -------
 
+3.0.3 (2026-08-14)
+~~~~~~~~~~~~~~~~~~
+
+* Modernize packaging: switch from ``setup.py``/``setup.cfg`` to ``pyproject.toml``
+* Replace Travis CI with GitHub Actions for tests and PyPI releases
+* Add Dependabot and pre-commit configuration
+* Support Django 5.2, 6.0 and 6.1; drop support for Python < 3.10
+* Clean up ruff lint findings in template tags and tests
+
 3.0.2 (2021-09-13)
 ~~~~~~~~~~~~~~~~~~
 

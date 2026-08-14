@@ -1,9 +1,0 @@
-include AUTHORS
-include CHANGELOG
-include LICENSE
-include README.rst
-
-# recursive-include docs *
-recursive-include addthis/templates *
-
-# recursive-exclude * *.py[co]

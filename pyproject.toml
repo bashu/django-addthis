@@ -180,6 +180,6 @@ ini_options.addopts = [ "--ds=addthis.tests.settings", "--reuse-db", "--import-m
 
 # ==== Coverage ====
 [tool.coverage]
+run.source = [ "addthis" ]
 run.omit = [ "*/migrations/*", "*/tests/*" ]
 run.relative_files = true
-run.source = [ "addthis" ]

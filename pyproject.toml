@@ -56,6 +56,7 @@ dev = [
 
 [tool.setuptools]
 packages.find.include = [ "addthis*" ]
+packages.find.exclude = [ "addthis.tests*" ]
 include-package-data = true
 package-data.addthis = [ "locale/**/*", "templates/**/*.html" ]
 dynamic.readme = { file = [ "README.rst", "CHANGES.rst" ], content-type = "text/x-rst" }

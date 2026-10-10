@@ -1,6 +1,13 @@
 Changes
 -------
 
+3.0.4 (2026-10-10)
+~~~~~~~~~~~~~~~~~~
+
+* Add support for Python 3.15
+* Drop support for Python 3.10; 3.11 is now the minimum required version
+* Exclude the ``addthis.tests`` package from the built distribution
+
 3.0.3 (2026-08-14)
 ~~~~~~~~~~~~~~~~~~
 

@@ -9,7 +9,7 @@ description = "Simple integration of the AddThis social sharing widget for Djang
 license = "GPL-3.0-only"
 maintainers = [ { name = "Basil Shubin", email = "basil.shubin@gmail.com" } ]
 authors = [ { name = "Raymond Wanyoike", email = "raymond.wanyoike@gmail.com" } ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Environment :: Web Environment",
@@ -21,7 +21,6 @@ classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
